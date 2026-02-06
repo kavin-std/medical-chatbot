@@ -6,7 +6,8 @@ import os
 app = FastAPI()
 
 HF_TOKEN = os.getenv("HF_TOKEN")
-MODEL_URL = "https://router.huggingface.co/models/google/flan-t5-base"
+MODEL_URL = "https://router.huggingface.co/models/google/flan-t5-small"
+
 
 
 headers = {
