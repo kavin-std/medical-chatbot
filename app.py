@@ -18,15 +18,14 @@ class ChatRequest(BaseModel):
 @app.post("/chat")
 def chat(req: ChatRequest):
     payload = {"inputs": req.message}
-
     response = requests.post(MODEL_URL, headers=headers, json=payload)
 
-    print("STATUS:", response.status_code)
-    print("RAW RESPONSE:", response.text)
-
-    data = response.json()
+    try:
+        data = response.json()
+    except:
+        return {"reply": "Model temporarily unavailable. Try again."}
 
     if isinstance(data, list):
-        return {"reply": data[0].get("generated_text", "No text")}
-    else:
-        return {"reply": str(data)}
+        return {"reply": data[0].get("generated_text", "")}
+
+    return {"reply": str(data)}
