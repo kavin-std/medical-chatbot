@@ -12,7 +12,7 @@ MODEL_URL = "https://router.huggingface.co/models/google/flan-t5-small"
 
 
 headers = {
-    "Authorization": f"Bearer {HF_TOKEN}"
+    "Authorization": f"Bearer {HF_TOKEN}",
     "Content-Type": "application/json"
 }
 
