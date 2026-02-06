@@ -6,8 +6,7 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 app = FastAPI()
 
 HF_TOKEN = os.getenv("HF_TOKEN")
-MODEL_URL = "https://router.huggingface.co/models/google/flan-t5-small"
-
+MODEL_URL = "https://router.huggingface.co/models/microsoft/BioGPT"
 
 
 
