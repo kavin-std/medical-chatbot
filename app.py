@@ -6,7 +6,7 @@ import os
 app = FastAPI()
 
 HF_TOKEN = os.getenv("HF_TOKEN")
-MODEL_URL = "https://api-inference.huggingface.co/models/microsoft/BioGPT"
+MODEL_URL = "https://router.huggingface.co/models/microsoft/BioGPT"
 
 headers = {
     "Authorization": f"Bearer {HF_TOKEN}"
