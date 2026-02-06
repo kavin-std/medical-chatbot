@@ -20,7 +20,8 @@ class ChatRequest(BaseModel):
 
 @app.post("/chat")
 def chat(req: ChatRequest):
-    payload = {"inputs": req.message}
+    payload = {"inputs": user_message}
+
 
     response = requests.post(MODEL_URL, headers=headers, json=payload)
 
